@@ -1,0 +1,26 @@
+#include <iostream> 
+#include <map> 
+using namespace std; 
+  
+int main (){ 
+     map<int, string> students{ 
+         { 1234, "Joe Bloggs"}, 
+         { 1235, "Johnny Cash"}, 
+         { 1236, "Balivn Cariss"}, 
+         { 1237, "Stacy Joy"}, 
+         { 1238, "Emma Clone"} 
+     }; 
+      
+     cout << "Enter Student Number" << endl; 
+     cout << "====================" << endl; 
+     int num;  
+     cin >> num;  
+     auto finder = students.find(num); 
+     if(finder != students.end()){  
+         cout << "Student " << finder->first << ": " << finder->second << endl;  
+     }else{ 
+         cout << "No student matches that number" << endl; 
+     } 
+      
+    return 0; 
+}
