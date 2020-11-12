@@ -1,0 +1,100 @@
+#include <iostream> 
+#include <vector> 
+#include <algorithm> 
+using namespace std; 
+  
+int main() { 
+     vector<int> vec {2, 3, 5, 9, 19, 21, 39, 21, 28, 21}; 
+     cout << "My Int Vector: " << endl; 
+     for(int i = 0; i < vec.size(); i++ ){ 
+         cout << vec.at(i) << " , "; 
+     } 
+     cout << endl; 
+     cout << endl; 
+      
+    sort(vec.begin(), vec.end()); 
+     cout << "Max in list: " << vec.at(0) << endl; 
+     cout << "Min in list: " << vec.at(vec.size()-1) << endl;
+      
+   
+     cout << endl; 
+     cout << endl; 
+      
+    vec.resize(20);  
+     cout << "Resized Vector: " << endl; 
+     for(int i = 0; i < vec.size(); i++ ){ 
+         cout << vec.at(i) << " , "; 
+     } 
+     cout << endl; 
+     cout << endl; 
+      
+    vec.at(10) = 21; 
+     vec.at(11) = 34; 
+     vec.at(12) = 55; 
+     vec.at(13) = 71; 
+     vec.at(14) = 18; 
+     vec.at(15) = 9; 
+     vec.at(16) = 3; 
+     vec.at(17) = 4; 
+     vec.at(18) = 40; 
+     vec.at(19) = 2; 
+      
+    cout << "New Vector Values: " << endl; 
+     for(int i = 0; i < vec.size(); i++ ){ 
+         cout << vec.at(i) << " , "; 
+     } 
+     cout << endl; 
+     cout << endl; 
+
+ 
+    vec.push_back(3);
+     vec.push_back(8); 
+     cout << "After Pushback: " << endl; 
+     for(int i = 0; i < vec.size(); i++ ){ 
+         cout << vec.at(i) << " , "; 
+     } 
+     cout << endl; 
+     cout << endl; 
+      
+    vec.pop_back(); 
+     vec.pop_back(); 
+     cout << "After Popback: " << endl; 
+     for(int i = 0; i < vec.size(); i++ ){
+         cout << vec.at(i) << " , "; 
+     } 
+     cout << endl; 
+     cout << endl; 
+      
+    cout << "Front of Vector: " << vec.front() << endl; 
+     cout << "Back of Vector: " << vec.back() << endl; 
+      
+    vec.clear(); 
+     cout << "Size of Vector: " << vec.size() << endl;  
+      
+    if(vec.empty()){ 
+         cout << "Vector is empty" << endl; 
+     }else{ 
+         cout << "Vector is not empty" << endl; 
+     } 
+      
+    cout << endl; 
+     return 0;
+}
+
+
+#include <iostream>
+#include <string>
+#include <tuple>
+
+using namespace std;
+
+int main()
+{
+	tuple<string, double, int> city("tokyo", 40.5, 14);
+	
+	cout<<"Name="<< get<0>city<<endl;
+	cout<<"temperature="<< get<1>city<<endl;
+	cout<<"wind speed="<<get<2>city<<endl;
+	
+	return 0;
+}
