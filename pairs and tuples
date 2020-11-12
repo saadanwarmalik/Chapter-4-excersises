@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+#include <tuple>
+
+using namespace std;
+
+int main()
+{
+    tuple<string, double, int> city("tokyo, 40.5, 14");
+    
+    cout<<"name="<< get<0>city << endl;
+    cout<<"temperature="<< get<1>city << endl;
+    cout<<"wind speed="<< get<2>city << endl;
+    
+    return 0;
+    
+}
